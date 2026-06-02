@@ -1,12 +1,13 @@
-package com.devpulse.service;
+package com.devpulse.devpulse_backend.service;
 
 import java.util.UUID;
+import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.devpulse.dto.CreateMonitorRequest;
-import com.devpulse.model.Monitor;
-import com.devpulse.repository.MonitorRepository;
+import com.devpulse.devpulse_backend.dto.CreateMonitorRequest;
+import com.devpulse.devpulse_backend.model.Monitor;
+import com.devpulse.devpulse_backend.repository.MonitorRepository;
 
 @Service
 public class MonitorService {
@@ -29,5 +30,8 @@ public class MonitorService {
         repository.save(monitor);
 
         return monitor;
+    }
+    public List<Monitor> getAllMonitors() {
+    return repository.findAll();
     }
 }

@@ -1,4 +1,4 @@
-package com.devpulse.dto;
+package com.devpulse.devpulse_backend.dto;
 
 public class CreateMonitorRequest {
 

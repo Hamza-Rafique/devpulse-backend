@@ -1,10 +1,10 @@
-package com.devpulse.controller;
+package com.devpulse.devpulse_backend.controller;
 
 import org.springframework.web.bind.annotation.*;
-
-import com.devpulse.dto.CreateMonitorRequest;
-import com.devpulse.model.Monitor;
-import com.devpulse.service.MonitorService;
+import java.util.List;
+import com.devpulse.devpulse_backend.dto.CreateMonitorRequest;
+import com.devpulse.devpulse_backend.model.Monitor;
+import com.devpulse.devpulse_backend.service.MonitorService;
 
 @RestController
 @RequestMapping("/monitors")
@@ -21,5 +21,10 @@ public class MonitorController {
             @RequestBody CreateMonitorRequest request) {
 
         return monitorService.createMonitor(request);
+    }
+
+    @GetMapping
+    public List<Monitor> getAllMonitors() {
+        return monitorService.getAllMonitors();
     }
 }

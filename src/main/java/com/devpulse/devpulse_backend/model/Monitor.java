@@ -1,4 +1,4 @@
-package com.devpulse.model;
+package com.devpulse.devpulse_backend.model;
 
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
 import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbPartitionKey;
