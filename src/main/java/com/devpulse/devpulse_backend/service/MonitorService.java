@@ -31,7 +31,12 @@ public class MonitorService {
 
         return monitor;
     }
+
     public List<Monitor> getAllMonitors() {
-    return repository.findAll();
+        return repository.findAll();
+    }
+
+    public void deleteMonitor(String monitorId) {
+        repository.deleteById(monitorId);
     }
 }

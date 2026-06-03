@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import com.devpulse.devpulse_backend.model.Monitor;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbEnhancedClient;
 import software.amazon.awssdk.enhanced.dynamodb.DynamoDbTable;
 import software.amazon.awssdk.enhanced.dynamodb.TableSchema;
@@ -35,6 +37,14 @@ public class MonitorRepository {
                 .forEach(monitors::add);
 
         return monitors;
+    }
+
+    public void deleteById(String monitorId) {
+
+        Monitor monitor = new Monitor();
+        monitor.setMonitorId(monitorId);
+
+        monitorTable.deleteItem(monitor);
     }
 
 }

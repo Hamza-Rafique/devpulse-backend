@@ -27,4 +27,13 @@ public class MonitorController {
     public List<Monitor> getAllMonitors() {
         return monitorService.getAllMonitors();
     }
+
+    @DeleteMapping("/{monitorId}")
+    public String deleteMonitor(
+            @PathVariable String monitorId) {
+
+        monitorService.deleteMonitor(monitorId);
+
+        return "Monitor deleted successfully";
+    }
 }
