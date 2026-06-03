@@ -236,7 +236,7 @@ This project covers many of the services and concepts tested in the AWS Certifie
 * [x] DynamoDB Integration
 * [x] Create Monitor API
 * [x] Get Monitors API
-* [ ] Delete Monitor API
+* [x] Delete Monitor API
 
 ### Week 2
 
